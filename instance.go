@@ -13,8 +13,6 @@ func (this *Instance) Serve(name string, data []byte, next Callback) {
 		name = strings.TrimPrefix(name, this.config.Prefix)
 	}
 
-	println("bus got", name)
-
 	ctx := &Context{inst: this}
 	ctx.Name = name
 	ctx.callback = next
@@ -78,9 +76,6 @@ func (this *Instance) execute(ctx *Context) {
 }
 
 func (this *Instance) action(ctx *Context) {
-	//这里是实际的执行，要去调用method
-	println("action...")
-
 	ctx.Body = ctx.Invoke(ctx.Name, ctx.Value)
 }
 

@@ -90,7 +90,7 @@ func (this *Module) Initialize() {
 	// 如果没有配置任何连接时，默认一个
 	if len(this.configs) == 0 {
 		this.configs[chef.DEFAULT] = Config{
-			Driver: chef.DEFAULT, Weight: 1, Codec: chef.GOB,
+			Driver: chef.DEFAULT, Weight: 1, Codec: chef.JSON,
 		}
 	} else {
 		// 默认分布， 如果想不参与分布，Weight设置为小于0 即可
