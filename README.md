@@ -1,2 +1,2 @@
 # bus
-chefsgo bus module
+Chefs.go bus module.
